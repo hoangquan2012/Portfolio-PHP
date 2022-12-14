@@ -1,0 +1,251 @@
+$buttons: ('default', 'primary', 'secondary', 'success', 'warning', 'danger', 'link', 'light', 'dark', 'pro');
+
+//Gen buttons
+a{
+	&.btn{
+		@include d-flex(row, center, center, inline-flex);
+	}
+}
+
+.btn{
+	font-family: var(--web-font);
+	font-size: 0.875rem;
+	font-weight: 500;
+
+	@include borderRadius();
+
+	color: var(--text-paragraph);
+
+	span{
+		font-family: var(--web-font);
+	}
+
+	&:hover{
+		color: var(--text-paragraph);
+	}
+	
+	&.focus,
+	&:focus{
+		outline: none;
+		box-shadow: none;
+	}
+
+	&.btn-lg{
+		font-size: 1.125rem;
+	}
+
+	&.btn-sm{
+		font-size: 0.75rem;
+
+		@include borderRadius(0.25rem);
+	}
+
+	&.btn-primary-gradient,
+    &.btn-secondary-gradient{
+        color: var(--white);
+    }
+
+    &.btn-primary-gradient{
+        @include gradientLinearBackground(45deg, var(--gradient-primary-start), var(--gradient-primary-end));
+    }
+
+    &.btn-secondary-gradient{
+        @include gradientLinearBackground(45deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+    }
+
+	&.btn-rounded{
+		@include borderRadius(2rem);
+	}
+
+	@each $key in $buttons{
+		&.btn-#{$key}{
+			background-color: var(--#{$key});
+			border: 1px solid var(--#{$key});
+			
+			@if($key == default){
+				color: var(--text-paragraph);
+			} @else if($key == light){
+				color: var(--dark);
+			} @else if($key == dark){
+				color: var(--light);
+			} @else {
+				color: var(--white);
+			}
+
+			&:hover{
+				background-color: var(--#{$key}-alpha-90);
+				border-color: var(--#{$key}-alpha-90);
+
+				&:not(:disabled):active,
+				&:not(.disabled):active{
+					background-color: var(--#{$key});
+					border-color: var(--#{$key});
+				}
+			}
+		}
+
+		&.btn-outline-#{$key}{
+			background-color: transparent;
+			border: 1px solid var(--#{$key});
+
+			@if($key == default){
+				color: var(--text-paragraph);
+			} @else if($key == light){
+				color: var(--light);
+			} @else if($key == dark){
+				color: var(--dark);
+			} @else {
+				color: var(--#{$key});
+			}
+
+			&:hover{
+				background-color: var(--#{$key});
+				border-color: var(--#{$key});
+				
+				@if($key == default){
+					color: var(--text-paragraph);
+				} @else if($key == light){
+					color: var(--dark);
+				} @else if($key == dark){
+					color: var(--light);
+				} @else {
+					color: var(--white);
+				}
+
+				&:not(:disabled):active,
+				&:not(.disabled):active{
+					background-color: var(--#{$key});
+					border-color: var(--#{$key});
+					color: var(--white);
+				}
+			}
+		}
+
+		&.btn-dashed-#{$key}{
+			background-color: transparent;
+			border: 1px dashed var(--#{$key});
+			
+			@if($key == default){
+				color: var(--text-paragraph);
+			} @else if($key == light){
+				color: var(--dark);
+			} @else if($key == dark){
+				color: var(--light);
+			} @else {
+				color: var(--#{$key});
+			}
+
+			&:hover{
+				background-color: var(--#{$key});
+				border-style: solid;
+				border-color: var(--#{$key});
+				color: var(--white);
+
+				&:not(:disabled):active,
+				&:not(.disabled):active{
+					background-color: var(--#{$key});
+					border-color: var(--#{$key});
+					color: var(--white);
+				}
+			}
+		}
+	}
+
+	&.btn-google {
+		border-color: #ea4335;
+		color: #ea4335;
+
+		&.btn-solid{
+			background-color: #ea4335;
+			color: var(--white);
+		}
+
+		&:hover {
+			background-color: lighten(#ea4335, 10%);
+			color: var(--white);
+		}
+	}
+
+	&.btn-facebook {
+		border-color: #3b5998;
+		color: #3b5998;
+
+		&.btn-solid{
+			background-color: #3b5998;
+			color: var(--white);
+		}
+
+		&:hover {
+			background-color: lighten(#3b5998, 10%);
+			color: var(--white);
+		}
+	}
+}
+
+.btn-switch{
+	width: 40px;
+	height: 22px;
+
+	background-color: var(--gray-3);
+	border: 1px solid var(--gray-2);
+	@include borderRadius(10px);
+
+	position: relative;
+
+	&.btn-switch-sm{
+		width: 30px;
+		height: 17px;
+
+		.control{
+			width: 15px;
+			height: 15px;
+		}
+	}
+
+	&.active{
+		background-color: var(--success);
+
+		.control{
+			left: auto;
+			right: 0;
+
+			@include transition(300ms);
+		}
+	}
+
+	&:hover{
+		cursor: pointer;
+	}
+
+	.control{
+		width: 20px;
+		height: 20px;
+
+		background-color: var(--white);
+		@include borderRadius(50%);
+
+		position: absolute;
+		top: 50%;
+		left: 0;
+
+		@include translate(0, -50%);
+
+		@include transition(300ms);
+	}
+}
+
+.btn-group{
+	.btn{
+		@include borderRadius(0);
+
+		&:first-child{
+			@include borderRadiusCustom(top, left);
+			@include borderRadiusCustom(bottom, left);
+		}
+
+		&:last-child{
+			@include borderRadiusCustom(top, right);
+			@include borderRadiusCustom(bottom, right);
+		}
+	}
+}

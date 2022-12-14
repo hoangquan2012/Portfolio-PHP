@@ -1,0 +1,121 @@
+@font-face{
+	font-family: 'Be Vietnam Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/BeVietnamPro-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-Medium.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-SemiBold.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-Bold.ttf') format("truetype");
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	color: var(--text-title);
+}
+
+p{
+	color: var(--text-paragraph);
+}
+
+h1{
+	font-weight: 500;
+	font-size: 6rem;
+}
+
+h2{
+	font-weight: 500;
+	font-size: 3.75rem;
+}
+
+h3{
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+h4{
+	font-weight: 500;
+	font-size: 2.125rem;
+}
+
+h5{
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+
+h6{
+	font-weight: 500;
+	font-size: 1.125rem;
+	
+	&.subtitle-md{
+		font-size: 1rem;
+	}
+	
+	&.subtitle-sm{
+		font-size: 0.875rem;
+	}
+}
+
+p{
+	font-size: 1rem;
+	
+	&.p-sm{
+		font-size: 0.875rem;
+	}
+	
+	&.p-caption{
+		font-size: 0.75rem;
+	}
+	
+	&.p-overline{
+		font-size: 0.625rem;
+		text-transform: uppercase;
+	}
+}
+
+.p-sm{
+	font-size: 0.875rem;
+}
+
+.p-cap{
+	font-size: 0.75rem;
+}
+
+.p-overline{
+	font-size: 0.625rem;
+
+	color: var(--text-overline);
+	
+	text-transform: uppercase;
+
+	letter-spacing: 0.025rem;
+}

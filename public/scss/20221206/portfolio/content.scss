@@ -1,0 +1,62 @@
+@import '../settings/mixin';
+body,
+html {
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+.page {
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+    @include d-flex(row, normal, stretch);
+    overflow: hidden;
+    .page-sider,
+    .page-body {
+        height: 100%;
+    }
+    .page-sider {
+        width: 13%;
+        height: 100%;
+        background-color: var(--primary);
+        .sider-content {
+            .sider-avatar {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 10px;
+                .img-mask {
+                    max-width: 10rem;
+                    max-height: 10rem;
+                    border: 0.5rem solid hsla(0, 0%, 100%, 0.2);
+                    margin: auto;
+                    display: block;
+                }
+            }
+            .sider-list {
+                .sider-item {
+                    width: 100%;
+                    height: 2.5rem;
+                    margin-bottom: 0.5rem;
+                    .sider-item-content {
+                        width: 100%;
+                        height: 100%;
+                        padding-left: 1.5rem;
+                        color: hsla(0, 0%, 100%, 0.65);
+                        @include d-flex(row, unset, center);
+                        &.active {
+                            background-color: var(--black-1);
+                        }
+                        &:hover {
+                            color: var(--white);
+                            transition: all 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page-body {
+        flex: 1 0 87%;
+    }
+}

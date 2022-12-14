@@ -1,0 +1,328 @@
+//GLOBAL COLORS
+$color-brand: #4397a4;
+
+$color-k12-header: #5cb7b0;
+
+$color-pro: #b31f66;
+
+$color-default-light: #ccc;
+$color-default-dark: #fafafa;
+
+$color-primary: #bd5d38;
+$color-secondary: #ffb64a;
+
+$color-success: #00bd8e;
+$color-warning: #ffa800;
+$color-danger: #f55b5b;
+
+$color-link: #04b0d6;
+
+$color-black: #000;
+$color-gray: #666;
+$color-white: #fff;
+
+:root,
+.theme-default,
+.theme-light {
+    --brand: #{$color-brand};
+
+    --k12-header: #{$color-k12-header};
+
+    --pro: #{$color-pro};
+
+    --default: #{$color-default-light};
+
+    --primary: #{$color-primary};
+    --secondary: #{$color-secondary};
+
+    --black: #{$color-black};
+    --white: #{$color-white};
+
+    --success: #{$color-success};
+    --warning: #{$color-warning};
+    --danger: #{$color-danger};
+
+    --link: #{$color-link};
+
+    --default-alpha-0: #{transparentize($color-default-light, 1)};
+    --default-alpha-10: #{transparentize($color-default-light, 0.9)};
+    --default-alpha-20: #{transparentize($color-default-light, 0.8)};
+    --default-alpha-30: #{transparentize($color-default-light, 0.7)};
+    --default-alpha-40: #{transparentize($color-default-light, 0.6)};
+    --default-alpha-50: #{transparentize($color-default-light, 0.5)};
+    --default-alpha-60: #{transparentize($color-default-light, 0.4)};
+    --default-alpha-70: #{transparentize($color-default-light, 0.3)};
+    --default-alpha-80: #{transparentize($color-default-light, 0.2)};
+    --default-alpha-90: #{transparentize($color-default-light, 0.1)};
+
+    --primary-alpha-0: #{transparentize($color-primary, 1)};
+    --primary-alpha-10: #{transparentize($color-primary, 0.9)};
+    --primary-alpha-20: #{transparentize($color-primary, 0.8)};
+    --primary-alpha-30: #{transparentize($color-primary, 0.7)};
+    --primary-alpha-40: #{transparentize($color-primary, 0.6)};
+    --primary-alpha-50: #{transparentize($color-primary, 0.5)};
+    --primary-alpha-60: #{transparentize($color-primary, 0.4)};
+    --primary-alpha-70: #{transparentize($color-primary, 0.3)};
+    --primary-alpha-80: #{transparentize($color-primary, 0.2)};
+    --primary-alpha-90: #{transparentize($color-primary, 0.1)};
+
+    --secondary-alpha-0: #{transparentize($color-secondary, 1)};
+    --secondary-alpha-10: #{transparentize($color-secondary, 0.9)};
+    --secondary-alpha-20: #{transparentize($color-secondary, 0.8)};
+    --secondary-alpha-30: #{transparentize($color-secondary, 0.7)};
+    --secondary-alpha-40: #{transparentize($color-secondary, 0.6)};
+    --secondary-alpha-50: #{transparentize($color-secondary, 0.5)};
+    --secondary-alpha-60: #{transparentize($color-secondary, 0.4)};
+    --secondary-alpha-70: #{transparentize($color-secondary, 0.3)};
+    --secondary-alpha-80: #{transparentize($color-secondary, 0.2)};
+    --secondary-alpha-90: #{transparentize($color-secondary, 0.1)};
+
+    --success-alpha-0: #{transparentize($color-success, 1)};
+    --success-alpha-10: #{transparentize($color-success, 0.9)};
+    --success-alpha-20: #{transparentize($color-success, 0.8)};
+    --success-alpha-30: #{transparentize($color-success, 0.7)};
+    --success-alpha-40: #{transparentize($color-success, 0.6)};
+    --success-alpha-50: #{transparentize($color-success, 0.5)};
+    --success-alpha-60: #{transparentize($color-success, 0.4)};
+    --success-alpha-70: #{transparentize($color-success, 0.3)};
+    --success-alpha-80: #{transparentize($color-success, 0.2)};
+    --success-alpha-90: #{transparentize($color-success, 0.1)};
+
+    --warning-alpha-0: #{transparentize($color-warning, 1)};
+    --warning-alpha-10: #{transparentize($color-warning, 0.9)};
+    --warning-alpha-20: #{transparentize($color-warning, 0.8)};
+    --warning-alpha-30: #{transparentize($color-warning, 0.7)};
+    --warning-alpha-40: #{transparentize($color-warning, 0.6)};
+    --warning-alpha-50: #{transparentize($color-warning, 0.5)};
+    --warning-alpha-60: #{transparentize($color-warning, 0.4)};
+    --warning-alpha-70: #{transparentize($color-warning, 0.3)};
+    --warning-alpha-80: #{transparentize($color-warning, 0.2)};
+    --warning-alpha-90: #{transparentize($color-warning, 0.1)};
+
+    --danger-alpha-0: #{transparentize($color-danger, 1)};
+    --danger-alpha-10: #{transparentize($color-danger, 0.9)};
+    --danger-alpha-20: #{transparentize($color-danger, 0.8)};
+    --danger-alpha-30: #{transparentize($color-danger, 0.7)};
+    --danger-alpha-40: #{transparentize($color-danger, 0.6)};
+    --danger-alpha-50: #{transparentize($color-danger, 0.5)};
+    --danger-alpha-60: #{transparentize($color-danger, 0.4)};
+    --danger-alpha-70: #{transparentize($color-danger, 0.3)};
+    --danger-alpha-80: #{transparentize($color-danger, 0.2)};
+    --danger-alpha-90: #{transparentize($color-danger, 0.1)};
+
+    --link-alpha-0: #{transparentize($color-link, 1)};
+    --link-alpha-10: #{transparentize($color-link, 0.9)};
+    --link-alpha-20: #{transparentize($color-link, 0.8)};
+    --link-alpha-30: #{transparentize($color-link, 0.7)};
+    --link-alpha-40: #{transparentize($color-link, 0.6)};
+    --link-alpha-50: #{transparentize($color-link, 0.5)};
+    --link-alpha-60: #{transparentize($color-link, 0.4)};
+    --link-alpha-70: #{transparentize($color-link, 0.3)};
+    --link-alpha-80: #{transparentize($color-link, 0.2)};
+    --link-alpha-90: #{transparentize($color-link, 0.1)};
+
+    --black-alpha-0: #{transparentize($color-black, 1)};
+    --black-alpha-10: #{transparentize($color-black, 0.9)};
+    --black-alpha-20: #{transparentize($color-black, 0.8)};
+    --black-alpha-30: #{transparentize($color-black, 0.7)};
+    --black-alpha-40: #{transparentize($color-black, 0.6)};
+    --black-alpha-50: #{transparentize($color-black, 0.5)};
+    --black-alpha-60: #{transparentize($color-black, 0.4)};
+    --black-alpha-70: #{transparentize($color-black, 0.3)};
+    --black-alpha-80: #{transparentize($color-black, 0.2)};
+    --black-alpha-90: #{transparentize($color-black, 0.1)};
+
+    --white-alpha-0: #{transparentize($color-white, 1)};
+    --white-alpha-10: #{transparentize($color-white, 0.9)};
+    --white-alpha-20: #{transparentize($color-white, 0.8)};
+    --white-alpha-30: #{transparentize($color-white, 0.7)};
+    --white-alpha-40: #{transparentize($color-white, 0.6)};
+    --white-alpha-50: #{transparentize($color-white, 0.5)};
+    --white-alpha-60: #{transparentize($color-white, 0.4)};
+    --white-alpha-70: #{transparentize($color-white, 0.3)};
+    --white-alpha-80: #{transparentize($color-white, 0.2)};
+    --white-alpha-90: #{transparentize($color-white, 0.1)};
+
+    --pro-alpha-0: #{transparentize($color-pro, 1)};
+    --pro-alpha-10: #{transparentize($color-pro, 0.9)};
+    --pro-alpha-20: #{transparentize($color-pro, 0.8)};
+    --pro-alpha-30: #{transparentize($color-pro, 0.7)};
+    --pro-alpha-40: #{transparentize($color-pro, 0.6)};
+    --pro-alpha-50: #{transparentize($color-pro, 0.5)};
+    --pro-alpha-60: #{transparentize($color-pro, 0.4)};
+    --pro-alpha-70: #{transparentize($color-pro, 0.3)};
+    --pro-alpha-80: #{transparentize($color-pro, 0.2)};
+    --pro-alpha-90: #{transparentize($color-pro, 0.1)};
+
+    --black-1: #2e170d;
+
+    --gray-1: #f8f9fc;
+    --gray-2: #e5e5ea;
+    --gray-3: #d1d1d6;
+    --gray-4: #c7c7cc;
+    --gray-5: #aeaeb2;
+    --gray-6: #8e8e93;
+
+    --bg-bw: #fefefe;
+    --bg-bw-rv: #121212;
+    --bg-main: #f2f2f2;
+    --bg-submain: #d1d1d6;
+
+    --light: #fefefe;
+    --dark: #121212;
+
+    --bg-bw-alpha-0: #{transparentize(#fefefe, 1)};
+    --bg-bw-alpha-10: #{transparentize(#fefefe, 0.9)};
+    --bg-bw-alpha-20: #{transparentize(#fefefe, 0.8)};
+    --bg-bw-alpha-30: #{transparentize(#fefefe, 0.7)};
+    --bg-bw-alpha-40: #{transparentize(#fefefe, 0.6)};
+    --bg-bw-alpha-50: #{transparentize(#fefefe, 0.5)};
+    --bg-bw-alpha-60: #{transparentize(#fefefe, 0.4)};
+    --bg-bw-alpha-70: #{transparentize(#fefefe, 0.3)};
+    --bg-bw-alpha-80: #{transparentize(#fefefe, 0.2)};
+    --bg-bw-alpha-90: #{transparentize(#fefefe, 0.1)};
+
+    --bg-bw-rv-alpha-0: #{transparentize(#121212, 1)};
+    --bg-bw-rv-alpha-10: #{transparentize(#121212, 0.9)};
+    --bg-bw-rv-alpha-20: #{transparentize(#121212, 0.8)};
+    --bg-bw-rv-alpha-30: #{transparentize(#121212, 0.7)};
+    --bg-bw-rv-alpha-40: #{transparentize(#121212, 0.6)};
+    --bg-bw-rv-alpha-50: #{transparentize(#121212, 0.5)};
+    --bg-bw-rv-alpha-60: #{transparentize(#121212, 0.4)};
+    --bg-bw-rv-alpha-70: #{transparentize(#121212, 0.3)};
+    --bg-bw-rv-alpha-80: #{transparentize(#121212, 0.2)};
+    --bg-bw-rv-alpha-90: #{transparentize(#121212, 0.1)};
+
+    --light-alpha-0: #{transparentize(#fefefe, 1)};
+    --light-alpha-10: #{transparentize(#fefefe, 0.9)};
+    --light-alpha-20: #{transparentize(#fefefe, 0.8)};
+    --light-alpha-30: #{transparentize(#fefefe, 0.7)};
+    --light-alpha-40: #{transparentize(#fefefe, 0.6)};
+    --light-alpha-50: #{transparentize(#fefefe, 0.5)};
+    --light-alpha-60: #{transparentize(#fefefe, 0.4)};
+    --light-alpha-70: #{transparentize(#fefefe, 0.3)};
+    --light-alpha-80: #{transparentize(#fefefe, 0.2)};
+    --light-alpha-90: #{transparentize(#fefefe, 0.1)};
+
+    --dark-alpha-0: #{transparentize(#121212, 1)};
+    --dark-alpha-10: #{transparentize(#121212, 0.9)};
+    --dark-alpha-20: #{transparentize(#121212, 0.8)};
+    --dark-alpha-30: #{transparentize(#121212, 0.7)};
+    --dark-alpha-40: #{transparentize(#121212, 0.6)};
+    --dark-alpha-50: #{transparentize(#121212, 0.5)};
+    --dark-alpha-60: #{transparentize(#121212, 0.4)};
+    --dark-alpha-70: #{transparentize(#121212, 0.3)};
+    --dark-alpha-80: #{transparentize(#121212, 0.2)};
+    --dark-alpha-90: #{transparentize(#121212, 0.1)};
+
+    --border: var(--gray-2);
+
+    --gradient-primary-start: #5cb7b0;
+    --gradient-primary-end: #36dab1;
+
+    --gradient-secondary-start: #f5c45b;
+    --gradient-secondary-end: #ffa800;
+
+    --text-title: #1c1c1c;
+    --text-subtitle: #484848;
+    --text-paragraph: #636363;
+    --text-overline: #636363;
+
+    --web-font: 'Be Vietnam Pro', sans-serif;
+}
+
+.theme-dark {
+    --default: #{$color-default-dark};
+
+    --gray-1: #1b1b1d;
+    --gray-2: #2c2c2e;
+    --gray-3: #3a3a3c;
+    --gray-4: #48484a;
+    --gray-5: #636366;
+    --gray-6: #8e8e93;
+
+    --bg-bw: #121212;
+    --bg-bw-rv: #fefefe;
+    --bg-main: #1c1c1c;
+    --bg-submain: #3a3a3c;
+
+    --light: #121212;
+    --dark: #fefefe;
+
+    --default-alpha-0: #{transparentize($color-default-dark, 1)};
+    --default-alpha-10: #{transparentize($color-default-dark, 0.9)};
+    --default-alpha-20: #{transparentize($color-default-dark, 0.8)};
+    --default-alpha-30: #{transparentize($color-default-dark, 0.7)};
+    --default-alpha-40: #{transparentize($color-default-dark, 0.6)};
+    --default-alpha-50: #{transparentize($color-default-dark, 0.5)};
+    --default-alpha-60: #{transparentize($color-default-dark, 0.4)};
+    --default-alpha-70: #{transparentize($color-default-dark, 0.3)};
+    --default-alpha-80: #{transparentize($color-default-dark, 0.2)};
+    --default-alpha-90: #{transparentize($color-default-dark, 0.1)};
+
+    --bg-bw-alpha-0: #{transparentize(#121212, 1)};
+    --bg-bw-alpha-10: #{transparentize(#121212, 0.9)};
+    --bg-bw-alpha-20: #{transparentize(#121212, 0.8)};
+    --bg-bw-alpha-30: #{transparentize(#121212, 0.7)};
+    --bg-bw-alpha-40: #{transparentize(#121212, 0.6)};
+    --bg-bw-alpha-50: #{transparentize(#121212, 0.5)};
+    --bg-bw-alpha-60: #{transparentize(#121212, 0.4)};
+    --bg-bw-alpha-70: #{transparentize(#121212, 0.3)};
+    --bg-bw-alpha-80: #{transparentize(#121212, 0.2)};
+    --bg-bw-alpha-90: #{transparentize(#121212, 0.1)};
+
+    --bg-bw-rv-alpha-0: #{transparentize(#fefefe, 1)};
+    --bg-bw-rv-alpha-10: #{transparentize(#fefefe, 0.9)};
+    --bg-bw-rv-alpha-20: #{transparentize(#fefefe, 0.8)};
+    --bg-bw-rv-alpha-30: #{transparentize(#fefefe, 0.7)};
+    --bg-bw-rv-alpha-40: #{transparentize(#fefefe, 0.6)};
+    --bg-bw-rv-alpha-50: #{transparentize(#fefefe, 0.5)};
+    --bg-bw-rv-alpha-60: #{transparentize(#fefefe, 0.4)};
+    --bg-bw-rv-alpha-70: #{transparentize(#fefefe, 0.3)};
+    --bg-bw-rv-alpha-80: #{transparentize(#fefefe, 0.2)};
+    --bg-bw-rv-alpha-90: #{transparentize(#fefefe, 0.1)};
+
+    --light-alpha-0: #{transparentize(#121212, 1)};
+    --light-alpha-10: #{transparentize(#121212, 0.9)};
+    --light-alpha-20: #{transparentize(#121212, 0.8)};
+    --light-alpha-30: #{transparentize(#121212, 0.7)};
+    --light-alpha-40: #{transparentize(#121212, 0.6)};
+    --light-alpha-50: #{transparentize(#121212, 0.5)};
+    --light-alpha-60: #{transparentize(#121212, 0.4)};
+    --light-alpha-70: #{transparentize(#121212, 0.3)};
+    --light-alpha-80: #{transparentize(#121212, 0.2)};
+    --light-alpha-90: #{transparentize(#121212, 0.1)};
+
+    --dark-alpha-0: #{transparentize(#fefefe, 1)};
+    --dark-alpha-10: #{transparentize(#fefefe, 0.9)};
+    --dark-alpha-20: #{transparentize(#fefefe, 0.8)};
+    --dark-alpha-30: #{transparentize(#fefefe, 0.7)};
+    --dark-alpha-40: #{transparentize(#fefefe, 0.6)};
+    --dark-alpha-50: #{transparentize(#fefefe, 0.5)};
+    --dark-alpha-60: #{transparentize(#fefefe, 0.4)};
+    --dark-alpha-70: #{transparentize(#fefefe, 0.3)};
+    --dark-alpha-80: #{transparentize(#fefefe, 0.2)};
+    --dark-alpha-90: #{transparentize(#fefefe, 0.1)};
+
+    --border: var(--gray-2);
+
+    --text-title: #f2f2f2;
+    --text-subtitle: #c7c7c7;
+    --text-paragraph: #aeaeae;
+    --text-overline: #aeaeae;
+}
+
+.theme-default {
+    --color-main-nav: #363636;
+    --color-main-nav-link: var(--white);
+}
+
+.theme-light {
+    --color-main-nav: var(--bg-bw);
+    --color-main-nav-link: var(--text-paragraph);
+}
+
+.theme-dark {
+    --color-main-nav: var(--bg-bw);
+    --color-main-nav-link: var(--text-paragraph);
+}

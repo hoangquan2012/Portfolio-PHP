@@ -1,0 +1,50 @@
+.nav{
+	&.nav-pills{
+		&.nav-underline{
+			&.nav-primary{
+				.nav-link{
+					&:hover{
+						color: var(--primary);
+					}
+
+					&.active{
+						border-bottom-color: var(--primary);
+						color: var(--primary);
+					}
+				}
+			}
+
+			&.nav-secondary{
+				.nav-link{
+					&:hover{
+						color: var(--secondary);
+					}
+
+					&.active{
+						border-bottom-color: var(--secondary);
+						color: var(--secondary);
+					}
+				}
+			}
+
+			.nav-link{
+				font-size: 0.875rem;
+				
+				border-bottom: 2px solid transparent;
+				color: var(--text-paragraph);
+
+				@include borderRadius(0);
+
+				&:hover{
+					color: var(--text-paragraph);
+				}
+
+				&.active{
+					background-color: transparent;
+					border-bottom-color: var(--bg-bw-rv);
+					color: var(--text-title);
+				}
+			}
+		}
+	}
+}

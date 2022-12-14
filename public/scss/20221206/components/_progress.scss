@@ -1,0 +1,22 @@
+.progress{
+	position: relative;
+
+	@include borderRadius(2rem);
+
+	.progress-bar{
+		background-color: var(--primary);
+		
+		@include borderRadius(2rem);
+	}
+
+	.progress-number{
+		color: var(--text-paragraph);
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+
+		@include translate(-50%, -50%);
+	}
+}

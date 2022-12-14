@@ -1,0 +1,28 @@
+.accordion{
+	.accordion-item{
+		.accordion-button{
+			&:focus{
+				box-shadow: none;
+			}
+
+			&:after{
+				content: '\e9c4';
+
+				background-image: none;
+
+				font-family: 'els';
+
+				color: var(--text-paragraph);
+
+				transform: scale(1, -1);
+			}
+
+			&:not(.collapsed){
+				&:after{
+					background-image: none;
+					transform: scale(1, 1);
+				}
+			}
+		}
+	}
+}

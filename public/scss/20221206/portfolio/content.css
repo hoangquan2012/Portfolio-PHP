@@ -1,0 +1,63 @@
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: stretch;
+  overflow: hidden;
+}
+.page .page-sider,
+.page .page-body {
+  height: 100%;
+}
+.page .page-sider {
+  width: 13%;
+  height: 100%;
+  background-color: var(--primary);
+}
+.page .page-sider .sider-content .sider-avatar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.page .page-sider .sider-content .sider-avatar .img-mask {
+  max-width: 10rem;
+  max-height: 10rem;
+  border: 0.5rem solid hsla(0deg, 0%, 100%, 0.2);
+  margin: auto;
+  display: block;
+}
+.page .page-sider .sider-content .sider-list .sider-item {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.page .page-sider .sider-content .sider-list .sider-item .sider-item-content {
+  width: 100%;
+  height: 100%;
+  padding-left: 1.5rem;
+  color: hsla(0deg, 0%, 100%, 0.65);
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: center;
+}
+.page .page-sider .sider-content .sider-list .sider-item .sider-item-content.active {
+  background-color: var(--black-1);
+}
+.page .page-sider .sider-content .sider-list .sider-item .sider-item-content:hover {
+  color: var(--white);
+  transition: all 0.5s;
+}
+.page .page-body {
+  flex: 1 0 87%;
+}/*# sourceMappingURL=content.css.map */

@@ -1,0 +1,15 @@
+@import '../../fonts/font.css';
+@import '../../settings/var';
+@import '../../settings/mixin';
+.content {
+    .content-header {
+        .my-name {
+            h1 {
+                font-family: fontBold;
+                span {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}

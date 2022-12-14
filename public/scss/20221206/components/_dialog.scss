@@ -1,0 +1,79 @@
+@import '../settings/mixin';
+
+.zyk-dialog{
+	display: none;
+
+	@include boxShadowDf();
+
+	position: absolute;
+	z-index: 1000;
+
+	&.show{
+		display: block;
+	}
+
+	.zyk-dialog-header{
+		min-height: 50px;
+
+		padding: 0 3rem;
+
+		background-color: var(--bg-bw);
+
+		position: relative;
+
+		@include d-flex(row, center, center);
+
+		&:first-child{
+			@include borderRadiusCustom(top, left);
+			@include borderRadiusCustom(top, right);
+		}
+
+		.btn {
+			&.btn-close-zyk-dialog{
+				position: absolute;
+				top: 0.25rem;
+				right: 0;
+				z-index: 1;
+			}
+		}
+	}
+
+	.zyk-dialog-body{
+		max-width: 400px;
+
+		padding: 0.25rem 1.5rem 0.5rem;
+
+		background-color: var(--bg-bw);
+
+		p {
+			text-align: center;
+		}
+
+		&:first-child{
+			@include borderRadiusCustom(top, left);
+			@include borderRadiusCustom(top, right);
+		}
+
+		&:last-child{
+			@include borderRadiusCustom(bottom, left);
+			@include borderRadiusCustom(bottom, right);
+		}
+	}
+
+	.zyk-dialog-footer{
+		padding: 0.25rem 1.5rem 0.5rem;
+
+		background-color: var(--bg-bw);
+
+		@include d-flex(row, center, center);
+
+		&:last-child{
+			@include borderRadiusCustom(bottom, left);
+			@include borderRadiusCustom(bottom, right);
+		}
+
+		> * {
+			margin: 0 0.25rem;
+		}
+	}
+}

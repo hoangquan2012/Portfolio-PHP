@@ -1,0 +1,93 @@
+$buttons: ('default', 'primary', 'secondary', 'success', 'warning', 'danger', 'link', 'pro');
+
+.badge{
+	font-family: var(--web-font);
+	font-weight: 500;
+	
+    &.badge-circle{
+        @include borderRadius(50%);
+    }
+
+	&.badge-rounded{
+        @include borderRadius(2rem);
+    }
+
+	&.badge-primary-gradient,
+    &.badge-secondary-gradient{
+        color: var(--white);
+    }
+
+    &.badge-primary-gradient{
+        @include gradientLinearBackground(45deg, var(--gradient-primary-start), var(--gradient-primary-end));
+    }
+
+    &.badge-secondary-gradient{
+        @include gradientLinearBackground(45deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+    }
+
+	@each $key in $buttons{
+		&.badge-#{$key}{
+			background-color: var(--#{$key});
+			
+			@if($key == default){
+				color: var(--text-paragraph) !important;
+			} @else {
+				color: var(--white) !important;
+			}
+		}
+
+		&.badge-outline-#{$key}{
+			border: 1px solid var(--#{$key});
+			background-color: transparent;
+			
+			@if($key == default){
+				border-color: var(--text-paragraph);
+				color: var(--text-paragraph) !important;
+			} @else {
+				color: var(--#{$key}) !important;
+			}
+		}
+
+		&.badge-alpha-#{$key}{
+			background-color: var(--#{$key}-alpha-20);
+			color: var(--#{$key}) !important;
+		}
+	}
+}
+
+a{
+	&.badge{
+		background-color: transparent;
+		color: var(--text-paragraph);
+
+		&.badge-primary-gradient,
+		&.badge-secondary-gradient{
+			color: var(--white) !important;
+		}
+
+		&.badge-primary-gradient{
+			@include gradientLinearBackground(45deg, var(--gradient-primary-start), var(--gradient-primary-end));
+		}
+	
+		&.badge-secondary-gradient{
+			@include gradientLinearBackground(45deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+		}
+
+		@each $key in $buttons{
+			&.badge-#{$key}{
+				background-color: var(--#{$key}) !important;
+				
+				@if($key == default){
+					color: var(--text-paragraph) !important;
+				} @else {
+					color: var(--white) !important;
+				}
+			}
+
+			&.badge-alpha-#{$key}{
+				background-color: var(--#{$key}-alpha-20);
+				color: var(--#{$key}) !important;
+			}
+		}
+	}
+}

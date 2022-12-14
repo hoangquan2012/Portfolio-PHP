@@ -1,0 +1,15 @@
+.swiper-container{
+	.swiper-pagination{
+		.swiper-pagination-bullet{
+			background-color: transparent;
+			border: 1px solid var(--gray-4);
+
+			opacity: 1;
+
+			&.swiper-pagination-bullet-active{
+				background-color: var(--primary);
+				border-color: var(--primary);
+			}
+		}
+	}
+}

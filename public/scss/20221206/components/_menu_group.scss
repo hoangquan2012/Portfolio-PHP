@@ -1,0 +1,94 @@
+@import '../settings/mixin';
+
+.menu-group{
+	background-color: var(--bg-bw);
+
+	@include borderRadius();
+
+	.menu-group-header{
+		padding: 0.5rem 0.75rem;
+
+		border-bottom: 1px solid var(--border);
+
+		@include borderRadiusCustom(top, left);
+		@include borderRadiusCustom(top, right);
+
+		h6{
+			font-weight: 600;
+
+			text-transform: uppercase;
+		}
+	}
+
+	.menu-group-body{
+		max-height: 70vh;
+
+		overflow-x: hidden;
+		@include overflow-y();
+
+		&:first-child{
+			@include borderRadiusCustom(top, left);
+			@include borderRadiusCustom(top, right);
+		}
+
+		&:last-child{
+			@include borderRadiusCustom(bottom, left);
+			@include borderRadiusCustom(bottom, right);
+		}
+
+		.menu-group-item{
+			.menu-group-parent{
+				@include d-flex(row, flex-start, center);
+
+				&.active,
+				&:hover{
+					@include gradientLinearBackground(90deg, #E9F1F2, rgba(233, 241, 242, 0));
+
+					a{
+						color: var(--primary);
+					}
+				}
+			}
+
+			.menu-group-child{
+				.menu-group-parent{
+					padding-left: calc(var(--level) * 1.25rem);
+				}
+			}
+
+			a{
+				font-size: 0.875rem;
+
+				color: var(--text-paragraph);
+
+				&.menu-group-collapse{
+					width: 32px;
+
+					@include d-flex(row, center, center);
+				}
+
+				&.menu-group-link{
+					width: 100%;
+
+					padding: 0.5rem 0.75rem;
+
+					overflow: hidden;
+					text-overflow: ellipsis;
+
+					white-space: nowrap;
+
+					&:not(:first-child){
+						width: calc(100% - 32px);
+
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.menu-group-footer{
+		@include borderRadiusCustom(bottom, left);
+		@include borderRadiusCustom(bottom, right);
+	}
+}

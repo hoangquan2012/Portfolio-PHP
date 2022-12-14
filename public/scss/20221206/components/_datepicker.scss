@@ -1,0 +1,84 @@
+.form-control {
+    &.datepicker {
+        padding: 0.375rem 0.75rem;
+        
+        @include borderRadius();
+    }
+}
+
+.datepicker{
+    table {
+        td,
+        th {
+            width: 36px;
+            height: 36px;
+
+            font-size: 0.875rem;
+        }
+
+        tr {
+            td {
+                &.day {
+                    @include borderRadius(50%);
+                    
+                    &.today {
+                        background-color: var(--secondary-alpha-50) !important;
+                        background-image: none;
+
+                        &:hover {
+                            background-image: none;
+                            background-color: var(--secondary-alpha-90);
+                            color: var(--white);
+                        }
+                    }
+
+                    &.active {
+                        background-color: var(--primary) !important;
+                        background-image: none;
+                        color: var(--white);
+
+                        &:hover {
+                            background-image: none;
+                            background-color: var(--primary-alpha-90);
+                            color: var(--white);
+                        }
+                    }
+                }
+
+                span{
+                    &.month{
+                        &.active{
+                            background-color: var(--primary) !important;
+                            background-image: none;
+                            color: var(--white);
+
+                            &:hover {
+                                background-image: none;
+                                background-color: var(--primary-alpha-50);
+                                color: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        thead {
+            tr {
+                th {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        tbody {
+
+        }
+    }
+}
+
+.bootstrap-timepicker-widget{
+    &.dropdown-menu{
+        z-index: 1080 !important;
+    }
+}
