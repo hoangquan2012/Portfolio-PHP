@@ -1,46 +1,170 @@
 @extends('20221206.layout.portfolio')
 @section('title')
-    My project
+My project
 @endsection
 @section('view')
-    <div class="content">
-        <div class="content-header">
-            <div class="my-name">
-                <h1>Hoang <span>Quan</span></h1>
-            </div>
-            <div class="address">
-                <div class=''>13NO4 resettlement area trieu khuc &nbsp; <span>quanna3799@gmail.com</span> </div>
-            </div>
-        </div>
-        <div class="content-body">
-            <div class="description">
-                <p>My name is Quan. I’m 23 years old and graduated rom University Of Transport
-                    Technology with a degree in Information Technology Branch.
+<div class="content">
+    <div class="content-header">
+        <h1 class='title-work'>
+            Project board
+        </h1>
+        <div>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="elo el-search"></i>
+                </span>
 
-                    I’m working as a Frontend Developer in MQ Solutions company with over 1 month experience developing
-                    different websites, apps and implementing them — from landing pages to big projects, mostly using
-                    ReactJS. I
-                    am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews.
-                    Iterative approaches to corporate strategy foster collaborative thinking to further the overall value
-                    proposition.
-
-                    My goal for the next two years is to be a Senior Frontend Developer. I’m now ready for more challenges
-                    and
-                    this position really excites me.
-
-                    That’s all about me</p>
-
+                <input type="search" class="form-control" id="inputFilterSearch" placeholder="Tìm kiếm...">
             </div>
-            <div class="link-profile">
-                <a href="https://www.instagram.com/hquan.201/"></a>
-                <a href="https://www.facebook.com/zind09/"></a>
-                <a href="https://github.com/"></a>
-                <a href="https://web.skype.com/"></a>
+            <div class="btn-add-project">
+                <i class="elo el-plus"></i> Add project
             </div>
+            <div class="btn-delete-project">
+                <i class="elo el-trash"></i> Delete project
+            </div>
+            <div class="form-check-group">
+						
+						<div class="form-switch">
+							<input type="checkbox">
+							<label data-toggle="check" data-type="switch">
+								<div class="btn-switch btn-switch-secondary active">
+									<div class="control"></div>
+								</div>
+							</label>
+						</div>
+					</div>
         </div>
     </div>
+    <div class="content-body">
+        <div class="container-project">
+            <p>My plan 3</p>
+            @php
+            $project_type = [
+            0 => [
+            'Title' => 'Learn Backend',
+            'creatAt' => '20/12/1999',
+            ],
+            1 => [
+            'Title' => 'Learn IETLS',
+            'creatAt' => '20/12/1999',
+            ],
+            2 => [
+            'Title' => 'FullStack',
+            'creatAt' => '20/12/1999',
+            ],
+            ];
+            @endphp
+            @foreach($project_type as $project)
+            <div class="card">
+                <div class="card-header">
+                    {{$project['Title']}}
+                </div>
+                <div class="card-body">
+                    <p>
+                        Date created: {{$project['creatAt']}}
+                    </p>
+                    <div>
+                        <div class="btn-edit">
+                            <i class="elo el-pencil"></i>
+                        </div>
+                        <div class="btn-watch">
+                            <i class="elo el-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="container-project">
+            <p>in progress 4</p>
+            @php
+            $project_type = [
+            0 => [
+            'Title' => 'Learn Fronted',
+            'creatAt' => '20/12/1999',
+            ],
+            1 => [
+            'Title' => 'Learn JS',
+            'creatAt' => '20/12/1999',
+            ],
+            2 => [
+            'Title' => 'Learn more English',
+            'creatAt' => '20/12/1999',
+            ],
+            3 => [
+            'Title' => 'Learn Sth',
+            'creatAt' => '20/12/1999',
+            ],
+            ];
+            @endphp
+            @foreach($project_type as $project)
+            <div class="card">
+                <div class="card-header">
+                    {{$project['Title']}}
+                </div>
+                <div class="card-body">
+                    <p>
+                        Date created: {{$project['creatAt']}}
+                    </p>
+                    <div>
+                        <div class="btn-edit">
+                            <i class="elo el-pencil"></i>
+                        </div>
+                        <div class="btn-watch">
+                            <i class="elo el-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="container-project">
+            <p>Done 4</p>
+            @php
+            $project_type = [
+            0 => [
+            'Title' => 'Toeic 600',
+            'creatAt' => '20/12/1999',
+            ],
+            1 => [
+            'Title' => 'NextJs',
+            'creatAt' => '20/12/1999',
+            ],
+            2 => [
+            'Title' => 'Ant design',
+            'creatAt' => '20/12/1999',
+            ],
+            3 => [
+            'Title' => 'Type Script',
+            'creatAt' => '20/12/1999',
+            ],
+            ];
+            @endphp
+            @foreach($project_type as $project)
+            <div class="card">
+                <div class="card-header">
+                    {{$project['Title']}}
+                </div>
+                <div class="card-body">
+                    <p>
+                        Date created: {{$project['creatAt']}}
+                    </p>
+                    <div>
+                        <div class="btn-edit">
+                            <i class="elo el-pencil"></i>
+                        </div>
+                        <div class="btn-watch">
+                            <i class="elo el-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('scss/20221206/portfolio/page/work.css') }}">
+<link rel="stylesheet" href="{{ asset('scss/20221206/portfolio/page/work.css') }}">
 @endsection

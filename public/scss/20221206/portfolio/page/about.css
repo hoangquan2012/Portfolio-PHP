@@ -1,4 +1,4 @@
-@import "../../fonts/font.css";
+@import '../../fonts/font.css';
 :root,
 .theme-default,
 .theme-light {
@@ -265,80 +265,9 @@
   --color-main-nav-link: var(--text-paragraph);
 }
 
-.content {
-  padding: 3rem 2.5rem;
+.content .content-header .my-name h1 {
+  font-family: fontBold;
 }
-.content .content-header > div {
-  margin: 0 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.content .content-header > div .input-group {
-  width: 25%;
-}
-.content .content-header > div .input-group span,
-.content .content-header > div .input-group input {
-  border-radius: 0;
-}
-.content .content-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.content .content-body .container-project {
-  background: rgb(245, 245, 245);
-  padding: 0.625rem;
-  margin: 0.625rem;
-  flex: 1 1 0%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: unset;
-  align-items: unset;
-}
-.content .content-body .container-project p {
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  color: rgb(94, 108, 132);
-}
-.content .content-body .container-project .card {
-  width: 100%;
-  margin: 5px 0px;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 2px;
-  border-radius: 0;
-}
-.content .content-body .container-project .card .card-header {
-  font-size: 0.875rem;
-}
-.content .content-body .container-project .card .card-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.content .content-body .container-project .card .card-body p {
-  color: rgb(194, 194, 194);
-  text-transform: uppercase;
-  font-size: 10px;
-  padding-top: 1rem;
-}
-.content .content-body .container-project .card .card-body > div {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-}
-.content .content-body .container-project .card .card-body > div i {
-  font-size: 1rem;
-}
-.content .content-body .container-project .card .card-body > div i:hover {
+.content .content-header .my-name h1 span {
   color: var(--primary);
-  cursor: pointer;
-}
-.content .content-body .container-project .card .card-body > div .btn-watch {
-  margin-left: 0.5rem;
-}/*# sourceMappingURL=work.css.map */
+}/*# sourceMappingURL=about.css.map */

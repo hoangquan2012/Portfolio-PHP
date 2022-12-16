@@ -1,13 +1,67 @@
-@import '../../fonts/font.css';
-@import '../../settings/var';
-@import '../../settings/mixin';
+@import "../../fonts/font.css";
+@import "../../settings/var";
+@import "../../settings/mixin";
 .content {
+    padding: 3rem 2.5rem;
     .content-header {
-        .my-name {
-            h1 {
-                font-family: fontBold;
-                span {
-                    color: var(--primary);
+        > div {
+            margin: 0 10px;
+            @include d-flex(row, flex-start, center);
+            .input-group {
+                width: 25%;
+                span,
+                input {
+                    @include borderRadius(0);
+                }
+            }
+            
+        }
+        
+    }
+    .content-body {
+        @include d-flex(row, center, center);
+        .container-project {
+            background: rgb(245, 245, 245);
+            padding: 0.625rem;
+            margin: 0.625rem;
+            flex: 1 1 0%;
+            height: 100vh;
+            @include d-flex(column, unset, unset);
+            p {
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                color: rgb(94, 108, 132);
+            }
+            .card {
+                width: 100%;
+                margin: 5px 0px;
+                box-shadow: rgb(9 30 66 / 25%) 0px 1px 2px;
+                @include borderRadius(0);
+                .card-header {
+                    font-size: 0.875rem;
+                }
+                .card-body {
+                    @include d-flex(row, space-between, center);
+                    p {
+                        color: rgb(194, 194, 194);
+                        text-transform: uppercase;
+                        font-size: 10px;
+                        padding-top: 1rem;
+                    }
+                    > div {
+                        height: 100%;
+                        @include d-flex(row, center, flex-end);
+                        i {
+                            font-size: 1rem;
+                            &:hover {
+                                color: var(--primary);
+                                cursor: pointer;
+                            }
+                        }
+                        .btn-watch {
+                            margin-left: 0.5rem;
+                        }
+                    }
                 }
             }
         }

@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['prefix' => '/'], function () {
     Route::get('/', function () {
-        return view('20221206/layout/portfolio');
-    });
-    Route::get('/about', function () {
-        return view('20221206/portfolio/about');
+        return view('20221206/portfolio/about/index');
     });
     Route::get('/work', function () {
         return view('20221206/portfolio/work/index');
