@@ -11,7 +11,7 @@
             </a>
         </div>
         <div class="sider-item">
-            <a href="#" class="sider-item-content">
+            <a href="{{ asset('work') }}" class="sider-item-content">
                 <i class="els el-pencil"></i>Work
             </a>
         </div>

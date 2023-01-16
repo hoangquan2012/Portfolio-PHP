@@ -8544,7 +8544,6 @@ body .tooltip.tooltip-toolbar .tooltip-inner, html .tooltip.tooltip-toolbar .too
 
 html,
 body {
-  font-family: var(--web-font);
   font-size: 16px;
 }
 html.font-size-small,

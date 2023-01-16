@@ -32,10 +32,10 @@
 
             </div>
             <div class="link-profile">
-                <a href="https://www.instagram.com/hquan.201/"></a>
-                <a href="https://www.facebook.com/zind09/"></a>
-                <a href="https://github.com/"></a>
-                <a href="https://web.skype.com/"></a>
+                <a href="https://www.instagram.com/hquan.201/"><i class="elo "></i></a>
+                <a href="https://www.facebook.com/zind09/"><i class="elo "></i></a>
+                <a href="https://github.com/"><i class="elo "></i></a>
+                <a href="https://web.skype.com/"><i class="elo "></i></a>
             </div>
         </div>
     </div>

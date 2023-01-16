@@ -1,0 +1,32 @@
+@import '../../settings/var';
+@import '../../settings/mixin';
+.container{
+	height: 100%;
+	@include d-flex(row,center,center);
+	.loading{
+		.loading-header{
+			@include d-flex(column,center,center);
+			>img{
+				width: 60px;
+				height: 60px;
+				@include borderRadius(50%)
+			}
+			>div{
+				@include d-flex(row,center,center);
+				label{
+
+				}
+				.loading-gif{
+					width: 60px;
+				}
+			}
+		}
+		.loading-body{
+
+			.progress{
+				width: 500px;
+				margin: auto;
+			}
+		}
+	}
+}

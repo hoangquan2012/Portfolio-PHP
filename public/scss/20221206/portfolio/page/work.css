@@ -1,4 +1,4 @@
-@import "../../fonts/font.css";
+@import '../../fonts/font.css';
 :root,
 .theme-default,
 .theme-light {
@@ -268,27 +268,68 @@
 .content {
   padding: 3rem 2.5rem;
 }
-.content .content-header > div {
+.content .content-header {
+  margin-bottom: 1rem;
+}
+.content .content-header h1 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: 700;
+  color: #343a40;
+}
+.content .content-body .body-filter {
   margin: 0 10px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: unset;
 }
-.content .content-header > div .input-group {
+.content .content-body .body-filter .input-group {
   width: 25%;
 }
-.content .content-header > div .input-group span,
-.content .content-header > div .input-group input {
+.content .content-body .body-filter .input-group span,
+.content .content-body .body-filter .input-group input {
   border-radius: 0;
 }
-.content .content-body {
+.content .content-body .btn-add-project,
+.content .content-body .btn-delete-project {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray-3);
+  padding: 5px;
+  font-size: 0.875rem;
+  margin-left: 1rem;
+  color: #000;
+}
+.content .content-body .btn-add-project:hover,
+.content .content-body .btn-delete-project:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+}
+.content .content-body .btn-switch-view {
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: #fff;
+  border: 1px solid var(--gray-3);
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+}
+.content .content-body .project-grid {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.content .content-body .container-project {
+.content .content-body .project-grid .container-project {
   background: rgb(245, 245, 245);
   padding: 0.625rem;
   margin: 0.625rem;
@@ -299,46 +340,70 @@
   justify-content: unset;
   align-items: unset;
 }
-.content .content-body .container-project p {
+.content .content-body .project-grid .container-project p {
   font-size: 0.875rem;
   text-transform: uppercase;
   color: rgb(94, 108, 132);
 }
-.content .content-body .container-project .card {
+.content .content-body .project-grid .container-project .card {
   width: 100%;
   margin: 5px 0px;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 2px;
   border-radius: 0;
 }
-.content .content-body .container-project .card .card-header {
+.content .content-body .project-grid .container-project .card .card-header {
   font-size: 0.875rem;
 }
-.content .content-body .container-project .card .card-body {
+.content .content-body .project-grid .container-project .card .card-body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.content .content-body .container-project .card .card-body p {
+.content .content-body .project-grid .container-project .card .card-body p {
   color: rgb(194, 194, 194);
   text-transform: uppercase;
   font-size: 10px;
   padding-top: 1rem;
 }
-.content .content-body .container-project .card .card-body > div {
+.content .content-body .project-grid .container-project .card .card-body > div {
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
 }
-.content .content-body .container-project .card .card-body > div i {
+.content .content-body .project-grid .container-project .card .card-body > div i {
   font-size: 1rem;
 }
-.content .content-body .container-project .card .card-body > div i:hover {
+.content .content-body .project-grid .container-project .card .card-body > div i:hover {
   color: var(--primary);
   cursor: pointer;
 }
-.content .content-body .container-project .card .card-body > div .btn-watch {
+.content .content-body .project-grid .container-project .card .card-body > div .btn-watch {
+  margin-left: 0.5rem;
+}
+.content .content-body .project-list .list-table {
+  margin-bottom: 1rem;
+}
+.content .content-body .project-list .list-table .list-items-body .card {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 2px;
+  border-radius: 0;
+}
+.content .content-body .project-list .list-table .list-items-body .card .group-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-body .project-list .list-table .list-items-body .card .group-filter i {
+  font-size: 1rem;
+  color: var(--text-paragraph);
+}
+.content .content-body .project-list .list-table .list-items-body .card .group-filter i:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+.content .content-body .project-list .list-table .list-items-body .card .group-filter .btn-watch {
   margin-left: 0.5rem;
 }/*# sourceMappingURL=work.css.map */
