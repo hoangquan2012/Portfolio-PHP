@@ -227,4 +227,5 @@
     @endif
 
     @include('20221206.portfolio.include.modaladd')
+    @include('20221206.portfolio.include.modaledit')
 </div>
